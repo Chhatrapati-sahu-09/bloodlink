@@ -1,25 +1,17 @@
+# Blood Bank Management System
 
+![Blood Bank Banner](client/public/Gemini_Generated_Image_oeqf9noeqf9noeqf.png)
 
-<p align="center">
-   <img src="client/public/Gemini_Generated_Image_oeqf9noeqf9noeqf.png" alt="Blood Bank Banner" width="600"/>
-</p>
-
-<h1 align="center"> Blood Bank Management System</h1>
-
-<p align="center">
-   <b>A modern, full-stack MERN application for seamless blood bank operations, connecting donors, blood banks, and hospitals.</b>
-</p>
-
-<p align="center">
-   <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"/>
-   <img src="https://img.shields.io/badge/Stack-MERN-red" alt="Stack"/>
-   <img src="https://img.shields.io/badge/Status-Production-green" alt="Status"/>
-</p>
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-brightgreen)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![React](https://img.shields.io/badge/React-18.x-blue?logo=react)](https://react.dev/)
 
 ---
 
-## 🚀 Features
+A comprehensive MERN stack application for managing blood bank operations, connecting donors, blood banks, and hospitals.
+
+## Features
 
 - **User Roles**: Admin, Blood Bank Staff, Hospital Staff, Blood Donors
 - **Authentication**: JWT-based secure login and registration
@@ -38,128 +30,74 @@
 - **Styling**: Plain CSS with design system
 - **Deployment**: Vercel (Frontend), Render/Railway (Backend)
 
-
-
 ---
 
-## 📸 Screenshots
-
-<p align="center">
-   <img src="client/public/images/Screenshot%202025-12-20%20235741.png" alt="Dashboard Screenshot 1" width="350" style="margin:8px;"/>
-   <img src="client/public/images/Screenshot%202025-12-20%20235558.png" alt="Dashboard Screenshot 2" width="350" style="margin:8px;"/>
-   <img src="client/public/images/Screenshot%202025-12-20%20235549.png" alt="Dashboard Screenshot 3" width="350" style="margin:8px;"/>
-   <img src="client/public/images/Screenshot%202025-12-20%20235457.png" alt="Dashboard Screenshot 4" width="350" style="margin:8px;"/>
-   <img src="client/public/images/Screenshot%202025-12-20%20235405.png" alt="Dashboard Screenshot 5" width="350" style="margin:8px;"/>
-   <img src="client/public/images/Screenshot%202025-12-20%20235218.png" alt="Dashboard Screenshot 6" width="350" style="margin:8px;"/>
-</p>
-
-
-
----
-
-## ⚙️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- Node.js 16+
-- MongoDB (local or Atlas)
-- npm or yarn
-
+- Node.js 18+
+- MongoDB
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd blood-bank-system
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/Chhatrapati-sahu-09/bloodlink.git
+cd bloodlink
 
-2. **Backend Setup**
-   ```bash
-   cd server
-   npm install
-   cp .env.example .env  # Configure your environment variables
-   npm run dev
-   ```
+# Install dependencies
+cd client && npm install
+cd ../server && npm install
+```
 
-3. **Frontend Setup**
-   ```bash
-   cd client
-   npm install
-   npm run dev
-   ```
+### Environment Setup
 
-4. **Environment Variables**
+- Create a `.env` file in `server/` with your MongoDB URI:
 
-   **Backend (.env)**
-   ```
-   MONGO_URI=mongodb://localhost:27017/bloodbank
-   JWT_SECRET=your_jwt_secret_here
-   PORT=5000
-   ```
+  ```
+  MONGO_URI=mongodb://localhost:27017/bloodbank
+  JWT_SECRET=your_jwt_secret
+  ```
 
-   **Frontend (.env)**
-   ```
-   REACT_APP_API_URL=http://localhost:5000/api
-   ```
+### Database Seeding
 
+```bash
+cd server
+node seed.js
+```
 
----
+### Running the App
 
-## 🚀 Deployment
-
-### Vercel (Frontend)
-
-1. Connect your GitHub repository to Vercel
-2. Set environment variable: `REACT_APP_API_URL=https://your-backend-url.com/api`
-3. Deploy automatically on push
-
-### Backend (Render/Railway)
-
-1. Connect repository
-2. Set environment variables as above
-3. Set build command: `npm install`
-4. Set start command: `npm start`
-
+```bash
+# Start backend
+cd server && npm start
+# Start frontend (in a new terminal)
+cd client && npm run dev
+```
 
 ---
 
-## 🩸 Usage
+## Screenshots
 
-1. **Register** as a user with appropriate role
-2. **Login** to access role-specific dashboard
-3. **Blood Banks**: Manage inventory, handle requests
-4. **Hospitals**: Search blood, submit requests, track status
-5. **Donors**: View eligibility, donation history
-6. **Admins**: System oversight, user management
+### Landing Page
 
+![Landing Page](client/public/Gemini_Generated_Image_oeqf9noeqf9noeqf.png)
+
+### Dashboard Example
+
+![Dashboard Screenshot](client/public/images/Screenshot%202025-12-20%20235741.png)
 
 ---
 
-## 📚 API Endpoints
+## More Screenshots
 
-### Authentication
-- `POST /api/auth/register` - User registration
-- `POST /api/auth/login` - User login
+Screenshots from the `client/public/images/` directory:
 
-### Inventory (Blood Bank)
-- `GET /api/inventory` - Get inventory
-- `POST /api/inventory` - Add inventory
-- `PUT /api/inventory/:id` - Update inventory
-
-### Requests
-- `POST /api/requests` - Create request (Hospital)
-- `GET /api/requests` - Get requests (Blood Bank)
-- `PUT /api/requests/:id/approve` - Approve request
-- `PUT /api/requests/:id/reject` - Reject request
-- `PUT /api/requests/:id/complete` - Complete request
-
-### Admin
-- `GET /api/admin/stats` - System statistics
-- `PUT /api/admin/users/:id/approve` - Approve user
-- `PUT /api/admin/users/:id/block` - Block user
-- `GET /api/admin/audit-logs` - Audit logs
-
+| Example Screens |
+|-----------------|
+| ![Screenshot 1](client/public/images/Screenshot%202025-12-20%20235741.png) |
+| *(Add more images from the images folder as needed)* |
 
 ---
 
@@ -188,31 +126,23 @@ blood-bank-system/
 └── README.md
 ```
 
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit changes
-4. Push to branch
-5. Create Pull Request
-
-
 ---
 
 ## 📝 License
 
 This project is licensed under the MIT License.
 
+---
+
+## Author
+
+Chhatrapati Sahu
 
 ---
 
-## 💬 Support
+## Acknowledgements
 
-For support, please contact the development team or create an issue in the repository.
-
----
-
-<p align="center"><b>Crafted with care for real-world impact. Save lives, one donation at a time.</b></p>
+- [React](https://react.dev/)
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Express](https://expressjs.com/)
