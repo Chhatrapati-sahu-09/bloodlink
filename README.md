@@ -1,5 +1,14 @@
 # Blood Bank Management System
 
+![Blood Bank Banner](client/public/Gemini_Generated_Image_oeqf9noeqf9noeqf.png)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-brightgreen)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![React](https://img.shields.io/badge/React-18.x-blue?logo=react)](https://react.dev/)
+
+---
+
 A comprehensive MERN stack application for managing blood bank operations, connecting donors, blood banks, and hospitals.
 
 ## Features
@@ -14,109 +23,86 @@ A comprehensive MERN stack application for managing blood bank operations, conne
 
 ## Tech Stack
 
-- **Frontend**: React 18, Vite, React Router, Axios
+- **Frontend**: React 18, Vite, React Router, Axios, CSS
 - **Backend**: Node.js, Express.js, MongoDB, Mongoose
 - **Authentication**: JWT, bcrypt
-- **Styling**: Plain CSS with design system
 - **Deployment**: Vercel (Frontend), Render/Railway (Backend)
+
+---
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 16+
-- MongoDB (local or Atlas)
-- npm or yarn
+- Node.js 18+
+- MongoDB
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd blood-bank-system
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/Chhatrapati-sahu-09/bloodlink.git
+cd bloodlink
 
-2. **Backend Setup**
-   ```bash
-   cd server
-   npm install
-   cp .env.example .env  # Configure your environment variables
-   npm run dev
-   ```
+# Install dependencies
+cd client && npm install
+cd ../server && npm install
+```
 
-3. **Frontend Setup**
-   ```bash
-   cd client
-   npm install
-   npm run dev
-   ```
+### Environment Setup
 
-4. **Environment Variables**
+- Create a `.env` file in `server/` with your MongoDB URI:
 
-   **Backend (.env)**
-   ```
-   MONGO_URI=mongodb://localhost:27017/bloodbank
-   JWT_SECRET=your_jwt_secret_here
-   PORT=5000
-   ```
+  ```
+  MONGO_URI=mongodb://localhost:27017/bloodbank
+  JWT_SECRET=your_jwt_secret
+  ```
 
-   **Frontend (.env)**
-   ```
-   REACT_APP_API_URL=http://localhost:5000/api
-   ```
+### Database Seeding
 
-## Deployment
+```bash
+cd server
+node seed.js
+```
 
-### Vercel (Frontend)
+### Running the App
 
-1. Connect your GitHub repository to Vercel
-2. Set environment variable: `REACT_APP_API_URL=https://your-backend-url.com/api`
-3. Deploy automatically on push
+```bash
+# Start backend
+cd server && npm start
+# Start frontend (in a new terminal)
+cd client && npm run dev
+```
 
-### Backend (Render/Railway)
+---
 
-1. Connect repository
-2. Set environment variables as above
-3. Set build command: `npm install`
-4. Set start command: `npm start`
+## Screenshots
 
-## Usage
+### Landing Page
 
-1. **Register** as a user with appropriate role
-2. **Login** to access role-specific dashboard
-3. **Blood Banks**: Manage inventory, handle requests
-4. **Hospitals**: Search blood, submit requests, track status
-5. **Donors**: View eligibility, donation history
-6. **Admins**: System oversight, user management
+![Landing Page](client/public/Gemini_Generated_Image_oeqf9noeqf9noeqf.png)
 
-## API Endpoints
+### Dashboard Example
 
-### Authentication
-- `POST /api/auth/register` - User registration
-- `POST /api/auth/login` - User login
+![Dashboard Screenshot](client/public/images/Screenshot%202025-12-20%20235741.png)
 
-### Inventory (Blood Bank)
-- `GET /api/inventory` - Get inventory
-- `POST /api/inventory` - Add inventory
-- `PUT /api/inventory/:id` - Update inventory
+---
 
-### Requests
-- `POST /api/requests` - Create request (Hospital)
-- `GET /api/requests` - Get requests (Blood Bank)
-- `PUT /api/requests/:id/approve` - Approve request
-- `PUT /api/requests/:id/reject` - Reject request
-- `PUT /api/requests/:id/complete` - Complete request
+## More Screenshots
 
-### Admin
-- `GET /api/admin/stats` - System statistics
-- `PUT /api/admin/users/:id/approve` - Approve user
-- `PUT /api/admin/users/:id/block` - Block user
-- `GET /api/admin/audit-logs` - Audit logs
+Screenshots from the `client/public/images/` directory:
+
+| Example Screens |
+|-----------------|
+| ![Screenshot 1](client/public/images/Screenshot%202025-12-20%20235741.png) |
+| *(Add more images from the images folder as needed)* |
+
+---
 
 ## Project Structure
 
 ```
-blood-bank-system/
+bloodlink/
 ├── client/                 # React frontend
 │   ├── public/
 │   ├── src/
@@ -138,18 +124,23 @@ blood-bank-system/
 └── README.md
 ```
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit changes
-4. Push to branch
-5. Create Pull Request
+---
 
 ## License
 
 This project is licensed under the MIT License.
 
-## Support
+---
 
-For support, please contact the development team or create an issue in the repository.
+## Author
+
+Chhatrapati Sahu
+
+---
+
+## Acknowledgements
+
+- [React](https://react.dev/)
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Express](https://expressjs.com/)

@@ -1,4 +1,6 @@
+
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 const User = require('./models/User');
 const Donor = require('./models/Donor');
 const Patient = require('./models/Patient');
@@ -30,7 +32,8 @@ async function seed() {
   ];
 
   for (const d of donors) {
-    const user = await User.create({ name: d.name, email: d.email, password: d.password, role: d.role, phone: d.phone });
+    const hashedPassword = await bcrypt.hash(d.password, 10);
+    const user = await User.create({ name: d.name, email: d.email, password: hashedPassword, role: d.role, phone: d.phone });
     await Donor.create({ userId: user._id, bloodGroup: d.bloodGroup, age: d.age, weight: d.weight, medicalConditions: d.medicalConditions, lastDonationDate: d.lastDonationDate });
   }
 
@@ -49,7 +52,8 @@ async function seed() {
   ];
 
   for (const p of patients) {
-    const user = await User.create({ name: p.name, email: p.email, password: p.password, role: p.role, phone: p.phone });
+    const hashedPassword = await bcrypt.hash(p.password, 10);
+    const user = await User.create({ name: p.name, email: p.email, password: hashedPassword, role: p.role, phone: p.phone });
     await Patient.create({ userId: user._id, patientType: p.patientType, hospitalName: p.hospitalName, address: p.address, city: p.city });
   }
 
@@ -68,7 +72,8 @@ async function seed() {
   ];
 
   for (const s of staff) {
-    const user = await User.create({ name: s.name, email: s.email, password: s.password, role: s.role, phone: s.phone });
+    const hashedPassword = await bcrypt.hash(s.password, 10);
+    const user = await User.create({ name: s.name, email: s.email, password: hashedPassword, role: s.role, phone: s.phone });
     await BloodBank.create({ userId: user._id, bloodBankName: s.bloodBankName, licenseNumber: s.licenseNumber, address: s.address, city: s.city, contactNumber: s.phone });
   }
 
