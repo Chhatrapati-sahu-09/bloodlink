@@ -87,15 +87,18 @@ cd client && npm run dev
 
 
 ---
+## 📸 Screenshots
 
-## More Screenshots
-
-Screenshots from the `client/public/images/` directory:
-
-| Example Screens |
-|-----------------|
-| ![Screenshot 1](client/public/images/Screenshot%202025-12-20%20235741.png) |
-| *(Add more images from the images folder as needed)* |
+<p align="center">
+  <img src="client/public/images/Screenshot%202025-12-20%20234540.png" alt="Screenshot 234540" width="350" style="margin:8px;"/>
+  <img src="client/public/images/Screenshot%202025-12-20%20235218.png" alt="Screenshot 235218" width="350" style="margin:8px;"/>
+  <img src="client/public/images/Screenshot%202025-12-20%20235307.png" alt="Screenshot 235307" width="350" style="margin:8px;"/>
+  <img src="client/public/images/Screenshot%202025-12-20%20235405.png" alt="Screenshot 235405" width="350" style="margin:8px;"/>
+  <img src="client/public/images/Screenshot%202025-12-20%20235457.png" alt="Screenshot 235457" width="350" style="margin:8px;"/>
+  <img src="client/public/images/Screenshot%202025-12-20%20235549.png" alt="Screenshot 235549" width="350" style="margin:8px;"/>
+  <img src="client/public/images/Screenshot%202025-12-20%20235558.png" alt="Screenshot 235558" width="350" style="margin:8px;"/>
+  <img src="client/public/images/Screenshot%202025-12-20%20235741.png" alt="Screenshot 235741" width="350" style="margin:8px;"/>
+</p>
 
 ---
 
