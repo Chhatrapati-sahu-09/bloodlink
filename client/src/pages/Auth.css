@@ -1,0 +1,202 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-gray-50);
+  padding: var(--spacing-4);
+}
+
+.auth-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-8);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-2);
+  color: var(--color-gray-900);
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-6);
+  font-size: var(--font-size-sm);
+}
+
+.auth-form {
+  margin-bottom: var(--spacing-6);
+}
+
+.error-message {
+  background-color: var(--color-red-50);
+  color: var(--color-red-600);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.success-message {
+  text-align: center;
+}
+
+.success-message h2 {
+  color: var(--color-green-600);
+  margin-bottom: var(--spacing-4);
+}
+
+.success-content {
+  margin-bottom: var(--spacing-6);
+}
+
+.success-content p {
+  margin-bottom: var(--spacing-3);
+  color: var(--color-gray-700);
+  line-height: 1.5;
+}
+
+.auth-footer a {
+  color: var(--color-red-600);
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: var(--spacing-6);
+  }
+}
+
+/* Donor Profile specific styles */
+.profile-status {
+  margin-bottom: 2rem;
+}
+
+.status-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.status-card h4 {
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.status.eligible {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.status.not-eligible {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.next-date {
+  margin-top: 0.5rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Blood Request specific styles */
+.request-summary {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 1.5rem;
+}
+
+.request-summary h4 {
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.summary-details p {
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+.status-pending {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.action-item:hover {
+  background: #f8f9fa;
+  border-color: #007bff;
+  transform: translateY(-2px);
+}
+
+.action-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.action-text strong {
+  display: block;
+  color: #495057;
+}
+
+.action-text small {
+  color: #6c757d;
+}
+
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.request-item {
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.request-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}

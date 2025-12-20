@@ -1,0 +1,121 @@
+.footer-logo-img {
+  display: block;
+  height: 36px;
+  width: auto;
+  margin-bottom: 6px;
+}
+/* --- Footer --- */
+.footer {
+  background: #fff;
+  border-top: 1.5px solid #ececec;
+  padding: 36px 0 0 0;
+  margin-top: 0;
+  font-family: inherit;
+}
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+.footer__col {
+  flex: 1 1 180px;
+  min-width: 180px;
+  max-width: 260px;
+  font-size: 1rem;
+}
+.footer__brand {
+  min-width: 220px;
+  max-width: 320px;
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.18rem;
+  margin-bottom: 8px;
+}
+.footer__logo-icon {
+  color: #e53935;
+  font-size: 1.3rem;
+  margin-right: 7px;
+}
+.footer__logo-text {
+  color: #222;
+  font-weight: 700;
+  font-size: 1.13rem;
+}
+.footer__desc {
+  color: #444;
+  font-size: 0.97rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2px;
+}
+.footer__col-title {
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+  font-size: 1.01rem;
+}
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__links a {
+  color: #222;
+  text-decoration: none;
+  font-size: 0.98rem;
+  transition: color 0.2s;
+}
+.footer__links a:hover {
+  color: #e53935;
+}
+.footer__divider {
+  border-top: 1px solid #e0e0e0;
+  margin: 32px 0 0 0;
+}
+.footer__copyright-row {
+  text-align: center;
+  padding: 16px 0 18px 0;
+}
+.footer__copyright {
+  color: #888;
+  font-size: 0.98rem;
+  letter-spacing: 0.1px;
+}
+
+@media (max-width: 900px) {
+  .footer__row {
+    gap: 18px;
+  }
+  .footer__col {
+    min-width: 140px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .footer__row {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .footer__brand {
+    margin-bottom: 10px;
+  }
+  .footer__divider {
+    margin: 18px 0 0 0;
+  }
+  .footer__copyright-row {
+    padding: 10px 0 12px 0;
+  }
+}

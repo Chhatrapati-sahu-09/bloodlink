@@ -1,0 +1,60 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.notification-icon {
+  position: relative;
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-600);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--color-red-500);
+  color: var(--color-white);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: var(--font-size-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.emergency-banner {
+  background-color: var(--color-red-50);
+  border: 1px solid var(--color-red-200);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-3) var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.emergency-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.emergency-icon {
+  font-size: var(--font-size-lg);
+}
+
+.emergency-text {
+  color: var(--color-red-700);
+  font-weight: 500;
+}
+
+.emergency-row {
+  background-color: rgba(239, 68, 68, 0.05);
+  border-left: 3px solid var(--color-red-400);
+}
+
+.emergency-row td {
+  font-weight: 500;
+}

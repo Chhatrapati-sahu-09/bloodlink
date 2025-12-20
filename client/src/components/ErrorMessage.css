@@ -1,0 +1,26 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-8);
+  background-color: var(--color-red-50);
+  border: 1px solid var(--color-red-200);
+  border-radius: var(--border-radius-lg);
+  margin: var(--spacing-4) 0;
+}
+
+.error-icon {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-2);
+}
+
+.error-title {
+  color: var(--color-red-700);
+  margin-bottom: var(--spacing-2);
+}
+
+.error-message {
+  color: var(--color-red-600);
+  margin-bottom: var(--spacing-4);
+}

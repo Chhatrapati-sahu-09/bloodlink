@@ -1,0 +1,517 @@
+.dashboard {
+  padding: var(--spacing-6);
+}
+
+.dashboard-header {
+  margin-bottom: var(--spacing-6);
+}
+
+.welcome-text {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-lg);
+  margin-top: var(--spacing-2);
+}
+
+.emergency-banner {
+  background: linear-gradient(90deg, var(--color-red-500), var(--color-red-600));
+  color: white;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.emergency-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.emergency-icon {
+  font-size: 1.5rem;
+}
+
+.emergency-text {
+  font-weight: 500;
+}
+
+.alerts-section {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--spacing-6);
+}
+
+.alerts-section h2 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+  color: var(--color-gray-900);
+}
+
+.alerts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.alert-card {
+  border: 2px solid;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-4);
+}
+
+.alert-card.critical {
+  border-color: var(--color-red-500);
+  background-color: var(--color-red-50);
+}
+
+.alert-card.low {
+  border-color: var(--color-yellow-500);
+  background-color: var(--color-yellow-50);
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.blood-group {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-gray-900);
+}
+
+.severity-badge {
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.severity-badge.critical {
+  background-color: var(--color-red-600);
+  color: white;
+}
+
+.severity-badge.low {
+  background-color: var(--color-yellow-600);
+  color: white;
+}
+
+.alert-message {
+  color: var(--color-gray-700);
+  font-style: italic;
+  margin-top: var(--spacing-2);
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.inventory-item {
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-3);
+  background-color: var(--color-gray-50);
+}
+
+.blood-group-header {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-red-600);
+  text-align: center;
+  margin-bottom: var(--spacing-2);
+  padding-bottom: var(--spacing-1);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.inventory-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-item .label {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+}
+
+.detail-item .value {
+  font-weight: bold;
+}
+
+.detail-item .value.available {
+  color: var(--color-green-600);
+}
+
+.detail-item .value.reserved {
+  color: var(--color-blue-600);
+}
+
+.detail-item .value.expiring {
+  color: var(--color-orange-600);
+}
+
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.request-item {
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-4);
+  background-color: var(--color-white);
+}
+
+.request-item.emergency {
+  border-left: 4px solid var(--color-red-500);
+  background-color: var(--color-red-50);
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.hospital {
+  font-weight: bold;
+  color: var(--color-gray-900);
+}
+
+.priority-badge {
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.priority-badge.emergency {
+  background-color: var(--color-red-600);
+  color: white;
+}
+
+.request-details {
+  margin-bottom: var(--spacing-3);
+}
+
+.request-details p {
+  margin: var(--spacing-1) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-700);
+}
+
+.request-actions {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.no-requests {
+  text-align: center;
+  color: var(--color-gray-500);
+  font-style: italic;
+  padding: var(--spacing-4);
+}
+
+.emergency-row {
+  background-color: var(--color-red-50);
+}
+
+.emergency-row td {
+  border-left: 4px solid var(--color-red-500);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.dashboard .card {
+  margin-bottom: var(--spacing-4);
+}
+
+.dashboard .card-header {
+  background-color: var(--color-gray-50);
+  border-bottom: 1px solid var(--color-gray-200);
+  padding: var(--spacing-3) var(--spacing-4);
+}
+
+.dashboard .card-body {
+  padding: var(--spacing-4);
+}
+
+.dashboard .table {
+  margin-bottom: 0;
+}
+
+.dashboard .btn {
+  margin-right: var(--spacing-2);
+}
+
+.text-lg {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: var(--spacing-2) 0;
+}
+
+.text-success { color: var(--color-green-600); }
+.text-danger { color: var(--color-red-600); }
+.text-warning { color: var(--color-yellow-600); }
+.text-muted { color: var(--color-gray-500); }
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.alert {
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  border-left: 4px solid;
+}
+
+.alert-danger {
+  background-color: var(--color-red-50);
+  border-left-color: var(--color-red-500);
+  color: var(--color-red-700);
+}
+
+.alert-warning {
+  background-color: var(--color-yellow-50);
+  border-left-color: var(--color-yellow-500);
+  color: var(--color-yellow-700);
+}
+
+.alert-info {
+  background-color: var(--color-blue-50);
+  border-left-color: var(--color-blue-500);
+  color: var(--color-blue-700);
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.badge {
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: bold;
+}
+
+.badge-success {
+  background-color: var(--color-green-500);
+  color: white;
+}
+
+.summary-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) 0;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item .label {
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.summary-item .value {
+  font-weight: bold;
+  color: var(--color-gray-900);
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: var(--spacing-4);
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Blood Bank Module Styles */
+.donation-records .blood-group-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.blood-group-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.blood-group-label {
+  font-weight: bold;
+  min-width: 40px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #007bff, #28a745);
+  transition: width 0.3s ease;
+}
+
+.blood-group-count {
+  font-size: 0.9rem;
+  color: #6c757d;
+  min-width: 60px;
+  text-align: right;
+}
+
+.request-card {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.request-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #495057;
+}
+
+.hospital-name {
+  color: #6c757d;
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.requester {
+  color: #6c757d;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.request-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.request-reason {
+  background: #fff3cd;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #ffc107;
+  margin-bottom: 1rem;
+}
+
+.notes {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #856404;
+}
+
+.request-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.filter-controls {
+  margin-top: 1rem;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.requests-summary {
+  margin-bottom: 2rem;
+}
+
+.requests-list {
+  margin-top: 2rem;
+}
+
+.no-requests {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
