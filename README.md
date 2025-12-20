@@ -25,7 +25,18 @@ A comprehensive MERN stack application for managing blood bank operations, conne
 - **Styling**: Plain CSS with design system
 - **Deployment**: Vercel (Frontend), Render/Railway (Backend)
 
-## Getting Started
+
+## Screenshots
+
+<p align="center">
+   <img src="client/public/images/Screenshot%202025-12-20%20235741.png" alt="Dashboard Screenshot 1" width="350" style="margin:8px;"/>
+   <img src="client/public/images/Screenshot%202025-12-20%20235558.png" alt="Dashboard Screenshot 2" width="350" style="margin:8px;"/>
+   <img src="client/public/images/Screenshot%202025-12-20%20235549.png" alt="Dashboard Screenshot 3" width="350" style="margin:8px;"/>
+   <img src="client/public/images/Screenshot%202025-12-20%20235457.png" alt="Dashboard Screenshot 4" width="350" style="margin:8px;"/>
+   <img src="client/public/images/Screenshot%202025-12-20%20235405.png" alt="Dashboard Screenshot 5" width="350" style="margin:8px;"/>
+   <img src="client/public/images/Screenshot%202025-12-20%20235218.png" alt="Dashboard Screenshot 6" width="350" style="margin:8px;"/>
+</p>
+
 
 ### Prerequisites
 
