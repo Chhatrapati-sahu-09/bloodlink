@@ -82,11 +82,9 @@ cd client && npm run dev
 
 ### Landing Page
 
-![Landing Page](client/public/Gemini_Generated_Image_oeqf9noeqf9noeqf.png)
+![Landing Page](client/public/images/Screenshot%202025-12-20%20235741.png)
 
-### Dashboard Example
 
-![Dashboard Screenshot](client/public/images/Screenshot%202025-12-20%20235741.png)
 
 ---
 
