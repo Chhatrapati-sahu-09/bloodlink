@@ -15,7 +15,7 @@ A comprehensive MERN stack application for managing blood bank operations, conne
 
 - **User Roles**: Admin, Blood Bank Staff, Hospital Staff, Blood Donors
 - **Authentication**: JWT-based secure login and registration
-- **Inventory Management**: Track blood units with expiry monitoring
+- **Inventory Management**: Track blood units with expiry monitoring  
 - **Request System**: Hospitals can request blood, blood banks approve/reject
 - **Emergency Alerts**: Priority handling for urgent requests
 - **Dashboard Analytics**: Role-specific dashboards with key metrics
