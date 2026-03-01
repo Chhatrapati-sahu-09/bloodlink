@@ -1,37 +1,57 @@
-
-# Entity Relationship Diagram (ERD)
-
-```
 USER
 │
-├── DONOR
-│     └── (userId)
+├── userId (PK)
+├── name
+├── email (Unique)
+├── password
+├── role (ENUM: DONOR, PATIENT, BLOODBANK, ADMIN)
+├── phone
+├── createdAt
+└── status
+
+│ 1 : 1 (Optional Specialization Based on Role)
 │
-├── PATIENT
-│     └── (userId)
+├───────────────┬────────────────┬────────────────
+│               │                │
+DONOR        PATIENT         BLOOD_BANK
+│               │                │
+├── donorId(PK) ├── patientId(PK) ├── bloodBankId(PK)
+├── userId(FK)  ├── userId(FK)    ├── userId(FK)
+├── bloodGroup  ├── type (IND/HOSP) ├── licenseNo
+├── weight      ├── hospitalName     ├── address
+├── lastDonation ├── address          ├── contactPerson
+├── availability ├── contactDetails   ├── geoLocation
+└── isVerified   └── isVerified       └── isVerified
+
+BLOOD_INVENTORY
 │
-└── BLOODBANK
-	└── (userId)
-	     │
-	     ├── BLOOD_INVENTORY
-	     │       └── (bloodBankId)
-	     │
-	     └── BLOOD_REQUEST
-			 ├── (bloodBankId)
-			 └── (patientId)
-```
+├── inventoryId (PK)
+├── bloodBankId (FK)
+├── bloodGroup
+├── unitsAvailable
+├── expiryDate
+├── componentType (Whole, Platelets, Plasma)
+├── lastUpdated
+└── status
 
-## Explanation of Relationships
+BLOOD_REQUEST
+│
+├── requestId (PK)
+├── patientId (FK)
+├── bloodGroup
+├── unitsRequired
+├── urgency (Low/Medium/High/Critical)
+├── hospitalAddress
+├── requiredDate
+├── status (Pending/Approved/Rejected/Fulfilled)
+├── createdAt
+└── notes
 
-- **User**: Base entity for authentication and role management. Each user can be a Donor, Patient, or Blood Bank Staff.
-- **Donor**: Linked to a User (userId). Stores donor-specific info (blood group, last donation, etc).
-- **Patient**: Linked to a User (userId). Can be an individual or hospital. Stores patient/hospital info.
-- **BloodBank**: Linked to a User (userId). Represents staff and blood bank details.
-- **BloodInventory**: Linked to a BloodBank (bloodBankId). Tracks blood units, type, expiry, and status.
-- **BloodRequest**: Linked to a Patient (patientId) and BloodBank (bloodBankId). Represents requests for blood, status, urgency, and fulfillment.
-
-**Key Relationships:**
-- One User → One Donor/Patient/BloodBank
-- One BloodBank → Many BloodInventory
-- One Patient → Many BloodRequest
-- One BloodBank → Many BloodRequest (as fulfiller)
+REQUEST_ASSIGNMENT (New Table – Important)
+│
+├── assignmentId (PK)
+├── requestId (FK)
+├── bloodBankId (FK)
+├── unitsApproved
+├── assignedAt
+└── fulfillmentStatus
